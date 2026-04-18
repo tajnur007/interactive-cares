@@ -1,0 +1,12 @@
+import { configureStore } from '@reduxjs/toolkit'
+import postReducer from './postSlice';
+import photoReducer from './photoSlice';
+import userReducer from './userSlice';
+
+export const store = configureStore({
+  reducer: {
+    posts: postReducer,
+    photos: photoReducer,
+    users: userReducer,
+  },
+})
